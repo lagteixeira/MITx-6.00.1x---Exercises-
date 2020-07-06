@@ -6,7 +6,7 @@ import math
 
 low = 0
 high = 100
-guess = math.ceil((high + low) / 2)
+guess = math.floor((high + low) / 2)
 print("Please think of a number between 0 and 100!")
 
 while True:
@@ -17,9 +17,9 @@ while True:
         break
     elif x == 'h':
         high = guess
-        guess = math.ceil((high + low) / 2)
+        guess = math.floor((high + low) / 2)
     elif x == 'l':
         low = guess
-        guess = math.ceil((high + low) / 2)
+        guess = math.floor((high + low) / 2)
     else:
         print("Sorry, I did not understand your input.")
