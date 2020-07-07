@@ -25,4 +25,6 @@ def gcdRecur(a, b):
     '''
     if b == 0:
         return a
-    return gcd(b, a%b)
+    return gcdRecur(b, a%b)
+
+print(gcdRecur (100, 19))
