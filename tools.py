@@ -17,4 +17,12 @@ def gcdIter(a, b):
         testvalue -= 1
     return testvalue
 
-print(gcdIter(100, 19))
+def gcdRecur(a, b):
+    '''
+    a, b: positive integers
+
+    returns: a positive integer, the greatest common divisor of a & b.
+    '''
+    if b == 0:
+        return a
+    return gcd(b, a%b)
