@@ -1,3 +1,5 @@
+import math
+
 def square(x):
     '''
     x: int or float.
@@ -23,8 +25,33 @@ def gcdRecur(a, b):
 
     returns: a positive integer, the greatest common divisor of a & b.
     '''
+
+
     if b == 0:
         return a
     return gcdRecur(b, a%b)
 
-print(gcdRecur (100, 19))
+def isIn(char, aStr):
+    if len(aStr) == 0:
+        return False
+    elif len(aStr) == 1:
+        if char == aStr:
+            return True
+        else:
+            return False
+    elif char == aStr[(len(aStr) // 2)]:
+        return True
+    elif char > aStr[(len(aStr) // 2)]:
+        isIn(char,aStr[len(aStr) // 2 + 1 :])
+    else:
+        isIn(char, aStr[: len(aStr) // 2 - 1])
+
+
+print (isIn("a", "agkw"))
+
+string = "agkw"
+
+print (string [len(string)//2])
+print(string [: len(string)// 2 - 1])
+
+print ("a" > "k")
